@@ -1,5 +1,6 @@
 import '@servicenow/sdk/global';
 import { UiPage } from '@servicenow/sdk/core';
+import dashboardPage from '../../client/index.html';
 
 /**
  * Dashboard UI Page
@@ -11,19 +12,6 @@ export const lto_dashboard_page = UiPage({
   endpoint: 'x_1998335_testlto_dashboard.do',
   description: 'LTO Compliance Dashboard - Philippine DOH License Management',
   category: 'general',
-  html: `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>LTO Dashboard</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="/dist/main.js"></script>
-      </body>
-    </html>
-  `,
+  html: dashboardPage,
   direct: true
 });

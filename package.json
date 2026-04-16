@@ -5,6 +5,8 @@
     "license": "UNLICENSED",
     "scripts": {
         "build": "vite build && now-sdk build",
+        "prebuild": "npm run build:react",
+        "build:react": "vite build",
         "dev": "vite",
         "deploy": "now-sdk install",
         "sync": "now-sdk sync",

@@ -1,24 +1,12 @@
 import '@servicenow/sdk/global';
 import { UiPage } from '@servicenow/sdk/core';
+import auditLogPage from '../../client/index.html';
 
 export const audit_log_page = UiPage({
   $id: Now.ID['audit-log-page'], 
   endpoint: 'x_1998335_testlto_audit_log.do',
-  description: 'Audit Log - All changes to licenses and facilities',
+  description: 'Audit Log - Record of all changes to licenses and facilities',
   category: 'general',
-  html: `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Audit Log</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="/dist/main.js"></script>
-      </body>
-    </html>
-  `,
+  html: auditLogPage,
   direct: true
 });

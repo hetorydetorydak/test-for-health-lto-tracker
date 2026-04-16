@@ -1,24 +1,12 @@
 import '@servicenow/sdk/global';
 import { UiPage } from '@servicenow/sdk/core';
+import checklistPage from '../../client/index.html';
 
-export const checklist_page = UiPage({
-  $id: Now.ID['checklist-page'], 
+export const form_checklist_page = UiPage({
+  $id: Now.ID['form-checklist-page'], 
   endpoint: 'x_1998335_testlto_checklist.do',
-  description: 'Form Checklist - Track renewal submission requirements',
+  description: 'Renewal Checklist - Track required documents and forms',
   category: 'general',
-  html: `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Form Checklist</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="/dist/main.js"></script>
-      </body>
-    </html>
-  `,
+  html: checklistPage,
   direct: true
 });

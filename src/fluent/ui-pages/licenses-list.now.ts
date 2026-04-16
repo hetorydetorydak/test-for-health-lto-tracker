@@ -1,5 +1,6 @@
 import '@servicenow/sdk/global';
 import { UiPage } from '@servicenow/sdk/core';
+import licensesPage from '../../client/index.html';
 
 /**
  * Licenses List UI Page
@@ -11,19 +12,6 @@ export const licenses_list_page = UiPage({
   endpoint: 'x_1998335_testlto_licenses.do',
   description: 'All Licenses - Filter by status, type, and expiry',
   category: 'general',
-  html: `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Licenses</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="/dist/main.js"></script>
-      </body>
-    </html>
-  `,
+  html: licensesPage,
   direct: true
 });
