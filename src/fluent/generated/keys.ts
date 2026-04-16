@@ -246,6 +246,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact'
                         id: '07c97ddc9b7c40c68134c5e8c086f7ca'
+                        deleted: true
                         key: {
                             name: 'x_1998335_testlto_test_dash.do - BYOUI Files'
                         }
@@ -271,6 +272,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '14c01d46625d4d788dbdb3011a268536'
+                        deleted: true
                         key: {
                             application_file: '4fc37d3b39c9409197dcf57dda81939a'
                             source_artifact: '07c97ddc9b7c40c68134c5e8c086f7ca'
@@ -312,6 +314,13 @@ declare global {
                         key: {
                             name: 'x_1998335_testlto_audit_log'
                             element: 'facility_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: '1cdcb5fb18ac4d8aa1fd68ffff0661f2'
+                        key: {
+                            endpoint: 'x_1998335_testlto_evidence.do'
                         }
                     },
                     {
@@ -1033,6 +1042,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '73222cbc44f34e10a1440ee270b908b8'
+                        deleted: true
                         key: {
                             application_file: 'b6e6c991a05b46efbf3d58782a113d1e'
                             source_artifact: '07c97ddc9b7c40c68134c5e8c086f7ca'
@@ -1142,6 +1152,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: '7c0a5d2225fd4cd48108219e21e159f2'
+                        key: {
+                            endpoint: 'x_1998335_testlto_facilities.do'
+                        }
+                    },
+                    {
                         table: 'sys_choice_set'
                         id: '8660516d0d5148f5be7802b005d5ba7e'
                         key: {
@@ -1161,6 +1178,7 @@ declare global {
                     {
                         table: 'sys_ui_page'
                         id: '88b157e43ab34d0bb5f25d723812ad0e'
+                        deleted: true
                         key: {
                             endpoint: 'x_1998335_testlto_test_dash.do'
                         }
@@ -1222,6 +1240,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: '91b77bd06830405d91cc961fbea547f3'
+                        key: {
+                            endpoint: 'x_1998335_testlto_license_form.do'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '927f0df7dc7b4decb357becb49490021'
                         key: {
@@ -1256,11 +1281,25 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: '97c5b7d04bf8410da234be83219b56e8'
+                        key: {
+                            endpoint: 'x_1998335_testlto_license_detail.do'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '98d7246ce4ef4fe9967469b27bb68f25'
                         key: {
                             name: 'x_1998335_testlto_form_checklist'
                             element: 'form_name'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: '9a709cf3610342fcbc1956855dbef6a3'
+                        key: {
+                            endpoint: 'x_1998335_testlto_alerts.do'
                         }
                     },
                     {
@@ -1652,6 +1691,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: 'd05fecb02f724471b47dfd01ed075492'
+                        key: {
+                            endpoint: 'x_1998335_testlto_checklist.do'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'd3b3ebb7e6764899896c36e83fefb0c5'
                         key: {
@@ -1691,6 +1737,13 @@ declare global {
                         key: {
                             name: 'x_1998335_testlto_alert'
                             element: 'sent_at'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: 'd7fdd2617e4e4c7ea9b90f1dc0324dcb'
+                        key: {
+                            endpoint: 'x_1998335_testlto_audit_log.do'
                         }
                     },
                     {
@@ -1744,6 +1797,13 @@ declare global {
                         key: {
                             name: 'x_1998335_testlto_license'
                             element: 'days_before_expiry'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: 'e1cc31dbf17e4b349ea2b4fded630ee0'
+                        key: {
+                            endpoint: 'x_1998335_testlto_licenses.do'
                         }
                     },
                     {
@@ -1875,6 +1935,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: 'ec72e5673e8a47799c1f653f0e6df565'
+                        key: {
+                            endpoint: 'x_1998335_testlto_facility_form.do'
+                        }
+                    },
+                    {
                         table: 'sys_ui_element'
                         id: 'eeccf99593d88b101d8135018bba10f7'
                         key: {
@@ -1957,6 +2024,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: 'f628feca631b4b5da48fbf22440d18f1'
+                        key: {
+                            endpoint: 'x_1998335_testlto_dashboard.do'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'f73b0cfc63954d26ad97832f96d6204a'
                         key: {
@@ -1968,6 +2042,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: 'f862ac9d27fc42f4a4e76ba32f8c4dab'
+                        deleted: true
                         key: {
                             application_file: '88b157e43ab34d0bb5f25d723812ad0e'
                             source_artifact: '07c97ddc9b7c40c68134c5e8c086f7ca'
