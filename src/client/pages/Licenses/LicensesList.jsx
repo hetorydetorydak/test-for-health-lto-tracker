@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { LayoutDashboard } from 'lucide-react';
 import { PageHeader, DataTable, EmptyState } from '../../components/index';
 import { StatusBadge } from '../../components/StatusBadge';
 import * as LTOService from '../../services/LTOService';
@@ -52,7 +51,7 @@ export default function LicensesList() {
   return (
     <div className="licenses-page">
       <PageHeader
-        icon={LayoutDashboard}
+        icon="📄"
         title="All Licenses"
         breadcrumbs={['Licenses']}
         actions={[{ label: '+ New License', variant: 'primary', onClick: () => window.location.href = '/x_1998335_testlto_license_form.do' }]}

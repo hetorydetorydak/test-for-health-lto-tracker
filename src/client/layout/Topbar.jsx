@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Bell, LogOut } from 'lucide-react';
 import './layout.css';
 
 /**
@@ -17,7 +16,7 @@ export function Topbar({ onLogout }) {
       <div className="topbar__right">
         {/* Alert Bell */}
         <button className="topbar__alert-btn" title="View alerts">
-          <Bell size={20} className="topbar__alert-icon" />
+          <span className="topbar__alert-icon">🔔</span>
           <span className="topbar__alert-badge">3</span>
         </button>
 
@@ -41,8 +40,7 @@ export function Topbar({ onLogout }) {
                   setShowUserMenu(false);
                 }}
               >
-                <LogOut size={16} />
-                Logout
+                🚪 Logout
               </button>
             </div>
           )}

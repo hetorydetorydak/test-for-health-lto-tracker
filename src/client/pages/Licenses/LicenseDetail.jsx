@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FileText } from 'lucide-react';
 import { PageHeader, EmptyState } from '../../components/index';
 import './licenses.css';
 
@@ -11,7 +10,7 @@ export default function LicenseDetail() {
   return (
     <div className="license-detail-page">
       <PageHeader
-        icon={FileText}
+        icon="📄"
         title="License Detail"
         breadcrumbs={['Licenses', 'Detail']}
       />

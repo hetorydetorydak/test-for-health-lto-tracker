@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { LayoutDashboard } from 'lucide-react';
 import { PageHeader, DataTable, EmptyState } from '../../components/index';
 import { StatusBadge } from '../../components/StatusBadge';
 import StatCard from '../../components/StatCard';
@@ -67,7 +66,7 @@ export default function LTODashboard() {
   return (
     <div className="dashboard">
       <PageHeader
-        icon={LayoutDashboard}
+        icon="📊"
         title="LTO Compliance Dashboard"
         breadcrumbs={['Dashboard']}
       />

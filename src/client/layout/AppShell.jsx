@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { LogOut } from 'lucide-react';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import './layout.css';

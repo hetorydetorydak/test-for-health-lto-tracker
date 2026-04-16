@@ -1,12 +1,4 @@
 import React from 'react';
-import {
-  LayoutDashboard,
-  Building2,
-  FileText,
-  Bell,
-  History,
-  ChevronLeft,
-} from 'lucide-react';
 import './layout.css';
 
 /**
@@ -16,11 +8,11 @@ import './layout.css';
 export function Sidebar({ collapsed = false, onToggle }) {
   // ServiceNow page endpoints
   const NAV_ITEMS = [
-    { icon: LayoutDashboard, label: 'Dashboard', endpoint: 'x_1998335_testlto_dashboard.do' },
-    { icon: Building2, label: 'Facilities', endpoint: 'x_1998335_testlto_facilities.do' },
-    { icon: FileText, label: 'Licenses', endpoint: 'x_1998335_testlto_licenses.do' },
-    { icon: Bell, label: 'Alerts', endpoint: 'x_1998335_testlto_alerts.do' },
-    { icon: History, label: 'Audit Log', endpoint: 'x_1998335_testlto_audit_log.do' },
+    { emoji: '📊', label: 'Dashboard', endpoint: 'x_1998335_testlto_dashboard.do' },
+    { emoji: '🏥', label: 'Facilities', endpoint: 'x_1998335_testlto_facilities.do' },
+    { emoji: '📄', label: 'Licenses', endpoint: 'x_1998335_testlto_licenses.do' },
+    { emoji: '🔔', label: 'Alerts', endpoint: 'x_1998335_testlto_alerts.do' },
+    { emoji: '📜', label: 'Audit Log', endpoint: 'x_1998335_testlto_audit_log.do' },
   ];
 
   const isActive = (endpoint) => {
@@ -34,14 +26,13 @@ export function Sidebar({ collapsed = false, onToggle }) {
       <div className="sidebar__header">
         {!collapsed && <div className="sidebar__logo">🛡 LTO Tracker</div>}
         <button className="sidebar__toggle" onClick={onToggle} title="Toggle sidebar">
-          <ChevronLeft size={20} />
+          ◀️
         </button>
       </div>
 
       {/* Navigation Items */}
       <nav className="sidebar__nav">
         {NAV_ITEMS.map((item) => {
-          const Icon = item.icon;
           const active = isActive(item.endpoint);
 
           return (
@@ -51,7 +42,7 @@ export function Sidebar({ collapsed = false, onToggle }) {
               className={`sidebar__nav-item ${active ? 'sidebar__nav-item--active' : ''}`}
               title={item.label}
             >
-              <Icon size={20} className="sidebar__nav-icon" />
+              <span className="sidebar__nav-emoji">{item.emoji}</span>
               {!collapsed && <span className="sidebar__nav-label">{item.label}</span>}
             </a>
           );

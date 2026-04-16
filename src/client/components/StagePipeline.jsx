@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
 import './components.css';
 
 /**
@@ -62,8 +61,7 @@ export function StagePipeline({ currentStage = 'not_started', onAdvance = null, 
       {onAdvance && canAdvance && currentStep < 4 && (
         <div className="stage-pipeline__action">
           <button className="stage-pipeline__advance-btn" onClick={onAdvance}>
-            <ChevronRight size={16} />
-            Advance Stage
+            ➡️ Advance Stage
           </button>
         </div>
       )}

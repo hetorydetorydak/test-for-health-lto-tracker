@@ -1,21 +1,20 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
 import './components.css';
 
 /**
  * PageHeader — Title, breadcrumb, and action buttons
  */
-export function PageHeader({ icon: Icon, title, breadcrumbs = [], actions = [] }) {
+export function PageHeader({ icon = '📄', title, breadcrumbs = [], actions = [] }) {
   return (
     <div className="page-header">
       <div className="page-header__left">
-        {Icon && <Icon size={24} className="page-header__icon" />}
+        {icon && <span className="page-header__icon">{icon}</span>}
         <h1 className="sn-heading-1">{title}</h1>
         {breadcrumbs.length > 0 && (
           <nav className="page-header__breadcrumb">
             {breadcrumbs.map((crumb, idx) => (
               <React.Fragment key={idx}>
-                {idx > 0 && <ChevronRight size={14} className="page-header__breadcrumb-sep" />}
+                {idx > 0 && <span className="page-header__breadcrumb-sep">➡️</span>}
                 <span className="page-header__breadcrumb-item">{crumb}</span>
               </React.Fragment>
             ))}
@@ -32,7 +31,7 @@ export function PageHeader({ icon: Icon, title, breadcrumbs = [], actions = [] }
               onClick={action.onClick}
               disabled={action.disabled}
             >
-              {action.icon && <action.icon size={16} />}
+              {action.icon && <span>{action.icon}</span>}
               {action.label}
             </button>
           ))}
@@ -46,10 +45,10 @@ export function PageHeader({ icon: Icon, title, breadcrumbs = [], actions = [] }
 /**
  * EmptyState — Shown when no data available
  */
-export function EmptyState({ icon: Icon, message, subtext, action }) {
+export function EmptyState({ icon = '📭', message, subtext, action }) {
   return (
     <div className="empty-state">
-      {Icon && <Icon size={48} className="empty-state__icon" />}
+      {icon && <span className="empty-state__icon">{icon}</span>}
       <h2 className="empty-state__message">{message}</h2>
       {subtext && <p className="empty-state__subtext">{subtext}</p>}
       {action && (
