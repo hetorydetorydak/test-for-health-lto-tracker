@@ -21,7 +21,7 @@ export const licenses_list_page = UiPage({
       </head>
       <body>
         <div id="app"></div>
-        <script type="module" src="/path/to/client/main.js"></script>
+        <script src="/dist/main.js"></script>
       </body>
     </html>
   `,
