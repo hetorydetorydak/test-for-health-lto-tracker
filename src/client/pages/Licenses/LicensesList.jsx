@@ -10,6 +10,7 @@ import './licenses.css';
 export default function LicensesList() {
   const [licenses, setLicenses] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('all');
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState('all');
@@ -22,6 +23,7 @@ export default function LicensesList() {
 
   const loadData = async () => {
     setLoading(true);
+    setError(null);
     try {
       const response = await LTOService.getLicenses(
         activeTab === 'all' ? null : activeTab,
@@ -30,9 +32,26 @@ export default function LicensesList() {
         page,
         10
       );
-      setLicenses(Array.isArray(response) ? response : response.result || []);
+      
+      // Handle different response formats
+      let data = [];
+      if (Array.isArray(response)) {
+        data = response;
+      } else if (response && typeof response === 'object' && Array.isArray(response.result)) {
+        data = response.result;
+      } else if (response && typeof response === 'object') {
+        data = [];
+      }
+      
+      if (!Array.isArray(data)) {
+        data = [];
+      }
+      
+      setLicenses(data);
     } catch (error) {
       console.error('Failed to load licenses:', error);
+      setError(`Failed to load licenses: ${error.message}`);
+      setLicenses([]);
     } finally {
       setLoading(false);
     }
@@ -105,6 +124,21 @@ export default function LicensesList() {
           <option value="olrs_pharmacy">OLRS – Pharmacy</option>
         </select>
       </div>
+
+      {/* Error State */}
+      {error && (
+        <div style={{
+          padding: '12px 16px',
+          marginBottom: '16px',
+          backgroundColor: '#fef2f2',
+          border: '1px solid #fecaca',
+          borderRadius: '4px',
+          color: '#991b1b',
+          fontSize: '14px'
+        }}>
+          ⚠️ {error}
+        </div>
+      )}
 
       {/* Table */}
       <DataTable
