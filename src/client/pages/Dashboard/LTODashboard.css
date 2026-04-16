@@ -1,0 +1,119 @@
+/* Dashboard Page Styles */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard__stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard__section {
+  background: var(--sn-white);
+  border-radius: var(--sn-card-radius);
+  padding: 20px;
+  box-shadow: var(--sn-shadow-card);
+}
+
+.dashboard__section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sn-navy);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sn-gray-300);
+}
+
+.dashboard__alerts-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard__alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--sn-gray-100);
+  border-left: 3px solid var(--sn-blue-primary);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.dashboard__alert-item:hover {
+  background: var(--sn-blue-light);
+}
+
+.dashboard__alert-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.dashboard__alert-threshold {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sn-navy);
+}
+
+.dashboard__alert-channel {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--sn-blue-light);
+  color: var(--sn-blue-primary);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.dashboard__alert-time {
+  font-size: 11px;
+  color: var(--sn-gray-500);
+  white-space: nowrap;
+}
+
+.dashboard__view-link {
+  color: var(--sn-blue-primary);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.dashboard__view-link:hover {
+  color: var(--sn-blue-dark);
+  text-decoration: underline;
+}
+
+.dashboard__view-all-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--sn-blue-primary);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dashboard__view-all-link:hover {
+  color: var(--sn-blue-dark);
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+/* Licenses Pages Styles */
+
+.licenses-page,
+.license-detail-page,
+.license-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.licenses__tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--sn-gray-300);
+  background: var(--sn-white);
+  border-radius: var(--sn-card-radius) var(--sn-card-radius) 0 0;
+  padding: 0 16px;
+}
+
+.licenses__tab {
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sn-gray-700);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  bottom: -1px;
+}
+
+.licenses__tab:hover {
+  color: var(--sn-blue-primary);
+}
+
+.licenses__tab--active {
+  color: var(--sn-blue-primary);
+  border-bottom-color: var(--sn-blue-primary);
+}
+
+.licenses__search-row {
+  display: flex;
+  gap: 12px;
+  background: var(--sn-white);
+  padding: 16px;
+  border-radius: var(--sn-card-radius);
+  box-shadow: var(--sn-shadow-card);
+}
+
+.licenses__search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.licenses__select {
+  min-width: 150px;
+}
+
+.facilities-page,
+.facility-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checklist-page,
+.evidence-page,
+.auditlog-page,
+.alerts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

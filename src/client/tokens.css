@@ -1,0 +1,146 @@
+/* ServiceNow Design Tokens for LTO Tracker */
+
+:root {
+  /* ── Brand Blues ── */
+  --sn-blue-primary: #0072db;
+  --sn-blue-dark: #004c97;
+  --sn-blue-light: #e8f3ff;
+
+  /* ── Neutrals ── */
+  --sn-navy: #1b2c3e;
+  --sn-navy-mid: #2e4259;
+  --sn-gray-700: #4a5568;
+  --sn-gray-500: #6b7a8d;
+  --sn-gray-300: #c8d0db;
+  --sn-gray-100: #f2f4f7;
+  --sn-white: #ffffff;
+
+  /* ── Status Semantics ── */
+  --sn-green: #1a7f5a;
+  --sn-green-bg: #e6f5ef;
+  --sn-green-border: #52c79b;
+
+  --sn-amber: #b45309;
+  --sn-amber-bg: #fef3c7;
+  --sn-amber-border: #f59e0b;
+
+  --sn-red: #b91c1c;
+  --sn-red-bg: #fee2e2;
+  --sn-red-border: #f87171;
+
+  --sn-purple: #4338ca;
+  --sn-purple-bg: #eef2ff;
+  --sn-purple-border: #818cf8;
+
+  /* ── UI Structure ── */
+  --sn-sidebar-width: 240px;
+  --sn-topbar-height: 56px;
+  --sn-card-radius: 8px;
+  --sn-input-radius: 6px;
+  --sn-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --sn-shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.18);
+
+  /* ── Typography ── */
+  --sn-font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --sn-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--sn-font);
+  background-color: var(--sn-gray-100);
+  color: var(--sn-gray-700);
+}
+
+/* ── Typography Scale ── */
+.sn-heading-1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--sn-navy);
+}
+
+.sn-heading-2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sn-navy);
+}
+
+.sn-heading-3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sn-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sn-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--sn-gray-700);
+}
+
+.sn-caption {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--sn-gray-500);
+}
+
+.sn-mono {
+  font-family: var(--sn-font-mono);
+  font-size: 12px;
+  color: var(--sn-gray-700);
+}
+
+/* ── Button Resets ── */
+button {
+  font-family: var(--sn-font);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+}
+
+/* ── Input Resets ── */
+input,
+textarea,
+select {
+  font-family: var(--sn-font);
+  border: 1px solid var(--sn-gray-300);
+  border-radius: var(--sn-input-radius);
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--sn-gray-700);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--sn-blue-primary);
+  box-shadow: 0 0 0 3px rgba(0, 114, 219, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--sn-gray-500);
+}
+
+/* ── Utility Classes ── */
+.card {
+  background: var(--sn-white);
+  border-radius: var(--sn-card-radius);
+  box-shadow: var(--sn-shadow-card);
+  padding: 16px;
+}
+
+.divider {
+  border-bottom: 1px solid var(--sn-gray-300);
+  margin: 16px 0;
+}

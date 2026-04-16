@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import LTODashboard from './LTODashboard.jsx';
+import App from './App.jsx';
+import './tokens.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <LTODashboard />
+    <App />
   </React.StrictMode>
 );
