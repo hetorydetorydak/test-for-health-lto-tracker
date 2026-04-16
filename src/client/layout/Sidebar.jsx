@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   Building2,
@@ -12,17 +11,22 @@ import './layout.css';
 
 /**
  * Sidebar — Left navigation rail
+ * Uses ServiceNow page endpoints (not React Router)
  */
 export function Sidebar({ collapsed = false, onToggle }) {
-  const location = useLocation();
-
+  // ServiceNow page endpoints
   const NAV_ITEMS = [
-    { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
-    { icon: Building2, label: 'Facilities', path: '/facilities' },
-    { icon: FileText, label: 'Licenses', path: '/licenses' },
-    { icon: Bell, label: 'Alerts', path: '/alerts' },
-    { icon: History, label: 'Audit Log', path: '/audit-log' },
+    { icon: LayoutDashboard, label: 'Dashboard', endpoint: 'x_1998335_testlto_dashboard.do' },
+    { icon: Building2, label: 'Facilities', endpoint: 'x_1998335_testlto_facilities.do' },
+    { icon: FileText, label: 'Licenses', endpoint: 'x_1998335_testlto_licenses.do' },
+    { icon: Bell, label: 'Alerts', endpoint: 'x_1998335_testlto_alerts.do' },
+    { icon: History, label: 'Audit Log', endpoint: 'x_1998335_testlto_audit_log.do' },
   ];
+
+  const isActive = (endpoint) => {
+    if (typeof window === 'undefined') return false;
+    return window.location.pathname.includes(endpoint);
+  };
 
   return (
     <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''}`}>
@@ -38,18 +42,18 @@ export function Sidebar({ collapsed = false, onToggle }) {
       <nav className="sidebar__nav">
         {NAV_ITEMS.map((item) => {
           const Icon = item.icon;
-          const isActive = location.pathname === item.path;
+          const active = isActive(item.endpoint);
 
           return (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`sidebar__nav-item ${isActive ? 'sidebar__nav-item--active' : ''}`}
+            <a
+              key={item.endpoint}
+              href={`/${item.endpoint}`}
+              className={`sidebar__nav-item ${active ? 'sidebar__nav-item--active' : ''}`}
               title={item.label}
             >
               <Icon size={20} className="sidebar__nav-icon" />
               {!collapsed && <span className="sidebar__nav-label">{item.label}</span>}
-            </Link>
+            </a>
           );
         })}
       </nav>

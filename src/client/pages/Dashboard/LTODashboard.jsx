@@ -40,10 +40,10 @@ export default function LTODashboard() {
   };
 
   const statCardConfigs = [
-    { label: 'Active', count: stats.active, status: 'active', onClick: () => window.location.href = '/licenses?status=active' },
-    { label: 'Expiring Soon', count: stats.expiring_soon, status: 'expiring_soon', onClick: () => window.location.href = '/licenses?status=expiring_soon' },
-    { label: 'Expired', count: stats.expired, status: 'expired', onClick: () => window.location.href = '/licenses?status=expired' },
-    { label: 'Under Renewal', count: stats.under_renewal, status: 'under_renewal', onClick: () => window.location.href = '/licenses?status=under_renewal' },
+    { label: 'Active', count: stats.active, status: 'active', onClick: () => window.location.href = '/x_1998335_testlto_licenses.do?status=active' },
+    { label: 'Expiring Soon', count: stats.expiring_soon, status: 'expiring_soon', onClick: () => window.location.href = '/x_1998335_testlto_licenses.do?status=expiring_soon' },
+    { label: 'Expired', count: stats.expired, status: 'expired', onClick: () => window.location.href = '/x_1998335_testlto_licenses.do?status=expired' },
+    { label: 'Under Renewal', count: stats.under_renewal, status: 'under_renewal', onClick: () => window.location.href = '/x_1998335_testlto_licenses.do?status=under_renewal' },
   ];
 
   const expiringColumns = [
@@ -57,7 +57,7 @@ export default function LTODashboard() {
       key: 'actions',
       label: '',
       render: (row) => (
-        <a href={`/licenses/${row.sys_id}`} className="dashboard__view-link">
+        <a href={`/x_1998335_testlto_license_detail.do?id=${row.sys_id}`} className="dashboard__view-link">
           View
         </a>
       ),
@@ -126,7 +126,7 @@ export default function LTODashboard() {
             ))}
           </div>
         )}
-        <a href="/alerts" className="dashboard__view-all-link">
+        <a href="/x_1998335_testlto_alerts.do" className="dashboard__view-all-link">
           View all alerts →
         </a>
       </div>

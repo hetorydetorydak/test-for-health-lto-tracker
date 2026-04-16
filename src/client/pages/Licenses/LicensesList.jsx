@@ -55,7 +55,7 @@ export default function LicensesList() {
         icon={LayoutDashboard}
         title="All Licenses"
         breadcrumbs={['Licenses']}
-        actions={[{ label: '+ New License', variant: 'primary', onClick: () => window.location.href = '/licenses/new' }]}
+        actions={[{ label: '+ New License', variant: 'primary', onClick: () => window.location.href = '/x_1998335_testlto_license_form.do' }]}
       />
 
       {/* Tab Bar */}

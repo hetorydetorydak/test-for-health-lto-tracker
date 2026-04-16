@@ -15,9 +15,9 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@servicenow/sdk": "4.6.0",
+        "@servicenow/eslint-plugin-sdk-app-plugin": "4.6.0",
         "@servicenow/glide": "26.0.1",
-        "eslint": "8.50.0",
-        "@servicenow/eslint-plugin-sdk-app-plugin": "4.6.0"
+        "@servicenow/sdk": "4.6.0",
+        "eslint": "8.50.0"
     }
 }
